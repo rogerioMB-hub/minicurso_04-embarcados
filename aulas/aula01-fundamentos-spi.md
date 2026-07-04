@@ -79,6 +79,8 @@ Ao final desta aula você será capaz de:
 
 ⚠️ **Importante:** o Wokwi **não tem um componente pronto** para o ST7735 (diferente do LCD e do OLED que vocês usaram no Mini-curso 03). Vamos usar um **chip criado pela comunidade** ([`martysweet/st7735-wokwi-chip`](https://github.com/martysweet/st7735-wokwi-chip), licença MIT).
 
+> 💡O link para a simulação é: (https://wokwi.com/projects/468652961129872385)
+
 ### Passo a passo
 
 1. Acesse [wokwi.com](https://wokwi.com) e crie um novo projeto **"MicroPython on ESP32"**
