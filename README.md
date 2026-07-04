@@ -61,9 +61,7 @@ minicurso_04-embarcados/
 
 > 💡 A ligação física (TFT ↔ ESP32) é **a mesma em todas as 6 aulas** — só o código muda. Por isso há um único `diagram.json` compartilhado, em vez de um por aula.
 
-## Publicação
 
-Veja [`COMO-PUBLICAR.md`](./COMO-PUBLICAR.md) para o passo a passo de publicação no GitHub Pages e uso no Google Sites.
 
 ---
 
