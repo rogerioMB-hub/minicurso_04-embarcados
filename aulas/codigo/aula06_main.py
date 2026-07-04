@@ -44,9 +44,15 @@ while True:
     # Apaga a area do grafico e redesenha todos os segmentos de reta
     tft.fillrect((GRAFICO_X, GRAFICO_Y), (GRAFICO_LARGURA, GRAFICO_ALTURA), TFT.BLACK)
 
+    # O eixo X deste display sai espelhado (comportamento comum em modulos ST7735,
+    # que varia conforme o fabricante/tab do chip). Por isso invertemos aqui o
+    # mapeamento coluna -> x, para que o valor mais novo (fim do buffer) sempre
+    # apareca a direita, e o mais antigo (inicio do buffer) saia pela esquerda.
     for coluna in range(GRAFICO_LARGURA - 1):
+        x1 = GRAFICO_X + (GRAFICO_LARGURA - 1 - coluna)
+        x2 = GRAFICO_X + (GRAFICO_LARGURA - 1 - (coluna + 1))
         y1 = GRAFICO_Y + (GRAFICO_ALTURA - 1 - valores[coluna])
         y2 = GRAFICO_Y + (GRAFICO_ALTURA - 1 - valores[coluna + 1])
-        tft.line((GRAFICO_X + coluna, y1), (GRAFICO_X + coluna + 1, y2), TFT.GREEN)
+        tft.line((x1, y1), (x2, y2), TFT.GREEN)
 
     time.sleep_ms(50)
