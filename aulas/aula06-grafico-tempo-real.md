@@ -55,8 +55,6 @@ Para desenhar a linha do gráfico, percorremos o buffer aos pares (posição `i`
 
 O circuito é **o mesmo da Aula 5** (com o potenciômetro). Use `assets/diagrams/diagram-tft-esp32-pot.json`.
 
-> 💡O link para a simulação é: (https://wokwi.com/projects/468654164907751425)
-
 ---
 
 ## 3. Código
@@ -102,18 +100,27 @@ while True:
 
     tft.fillrect((GRAFICO_X, GRAFICO_Y), (GRAFICO_LARGURA, GRAFICO_ALTURA), TFT.BLACK)
 
+    # O eixo X deste display sai espelhado (comportamento comum em modulos ST7735,
+    # que varia conforme o fabricante/tab do chip). Por isso invertemos aqui o
+    # mapeamento coluna -> x, para que o valor mais novo (fim do buffer) sempre
+    # apareca a direita, e o mais antigo (inicio do buffer) saia pela esquerda.
     for coluna in range(GRAFICO_LARGURA - 1):
+        x1 = GRAFICO_X + (GRAFICO_LARGURA - 1 - coluna)
+        x2 = GRAFICO_X + (GRAFICO_LARGURA - 1 - (coluna + 1))
         y1 = GRAFICO_Y + (GRAFICO_ALTURA - 1 - valores[coluna])
         y2 = GRAFICO_Y + (GRAFICO_ALTURA - 1 - valores[coluna + 1])
-        tft.line((GRAFICO_X + coluna, y1), (GRAFICO_X + coluna + 1, y2), TFT.GREEN)
+        tft.line((x1, y1), (x2, y2), TFT.GREEN)
 
     time.sleep_ms(50)
 ```
+
+> ⚠️ **Nota de correção:** se o gráfico parecer andar da direita para a esquerda (o valor mais novo entrando pela esquerda, ao invés da direita), é a orientação padrão do display — bem comum em módulos ST7735, já que varia conforme o fabricante/tab do chip. O trecho acima já inclui a correção: invertemos o mapeamento `coluna → x` para compensar. Se ainda assim sair invertido no seu display físico, também é possível resolver chamando `tft.rotation(0)`, `tft.rotation(1)`, `tft.rotation(2)` ou `tft.rotation(3)` logo após `tft.initr()` até encontrar a orientação correta.
 
 ### Explicando o código
 
 - `valores[coluna]` guarda a **altura em pixels** da leitura naquela posição do gráfico — quanto maior o valor lido, mais alto (mais próximo do topo) o ponto aparece;
 - A expressão `GRAFICO_ALTURA - 1 - valores[coluna]` inverte o eixo Y: como Y cresce para baixo na tela, precisamos "virar" o valor para que leituras maiores apareçam mais **acima**;
+- Da mesma forma, `GRAFICO_LARGURA - 1 - coluna` inverte o eixo X, compensando a orientação espelhada do display (veja a nota de correção logo abaixo);
 - Note que a cada iteração **todo o gráfico é apagado e redesenhado** — funciona, mas não é a forma mais eficiente (veja o desafio bônus).
 
 ---
