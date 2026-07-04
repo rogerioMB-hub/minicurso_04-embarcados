@@ -53,6 +53,8 @@ Pensar em "que formas simples compõem esse desenho?" é uma habilidade central 
 
 O circuito é **o mesmo das aulas anteriores** — nenhuma mudança na ligação física. Use `assets/diagrams/diagram-tft-esp32.json`.
 
+> 💡O link para a simulação é: (https://wokwi.com/projects/468653677153164289)
+
 ---
 
 ## 3. Código
