@@ -55,6 +55,7 @@ Para desenhar a linha do gráfico, percorremos o buffer aos pares (posição `i`
 
 O circuito é **o mesmo da Aula 5** (com o potenciômetro). Use `assets/diagrams/diagram-tft-esp32-pot.json`.
 
+> 💡O link para a simulação é: (https://wokwi.com/projects/468654164907751425)
 ---
 
 ## 3. Código
