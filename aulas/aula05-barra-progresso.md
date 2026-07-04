@@ -51,6 +51,8 @@ Se, a cada leitura, apagarmos a barra **inteira** e a redesenharmos, o display p
 
 ⚠️ Esta aula usa um **circuito diferente das anteriores**: adicionamos um potenciômetro. Use `assets/diagrams/diagram-tft-esp32-pot.json`.
 
+> 💡O link para a simulação é: (https://wokwi.com/projects/468654060624766977)
+
 ### Pinagem adicional
 
 | Sinal | Pino ESP32 | Pino Pico |
