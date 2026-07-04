@@ -56,7 +56,7 @@ A biblioteca `ST7735.py` oferece funções prontas para as formas mais comuns:
 
 O circuito é **o mesmo das Aulas 1 e 2** — nenhuma mudança na ligação física. Use `assets/diagrams/diagram-tft-esp32.json`.
 
-> 💡O link para a simulação é: (https://wokwi.com/projects/468653677153164289)
+> 💡O link para a simulação é: (https://wokwi.com/projects/468653933807879169)
 
 ---
 
