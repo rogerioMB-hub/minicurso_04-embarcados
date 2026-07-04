@@ -52,7 +52,7 @@ Diferente do terminal do seu computador, o display **não limpa sozinho** o que 
 
 O circuito é **o mesmo da Aula 1** — nenhuma mudança na ligação física. Use o mesmo `diagram.json` (`assets/diagrams/diagram-tft-esp32.json`).
 
-https://wokwi.com/projects/468653382476036097
+> 💡O link para a simulação é: (https://wokwi.com/projects/468653382476036097)
 
 ---
 
