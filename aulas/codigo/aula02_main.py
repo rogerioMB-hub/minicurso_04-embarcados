@@ -13,6 +13,8 @@ PIN_SCK, PIN_MOSI, PIN_CS, PIN_DC, PIN_RST = 18, 23, 5, 2, 4
 
 spi = SPI(2, baudrate=20000000, polarity=0, phase=0,
           sck=Pin(PIN_SCK), mosi=Pin(PIN_MOSI))
+# Pico: spi = SPI(0, baudrate=20000000, polarity=0, phase=0,
+#              sck=Pin(PIN_SCK), mosi=Pin(PIN_MOSI))
 
 tft = TFT(spi, PIN_DC, PIN_RST, PIN_CS)
 tft.initr()
@@ -21,7 +23,8 @@ tft.fill(TFT.BLACK)
 
 # text(posicao, texto, cor, fonte, tamanho)
 tft.text((5, 10), "Ola, mundo!", TFT.WHITE, sysfont, 1)
-tft.text((5, 30), "ESP32 + TFT", TFT.CYAN, sysfont, 2)
+tft.text((5, 30), "PICO + TFT", TFT.CYAN, sysfont, 2)
+# ESP32: tft.text((5, 30), "ESP32 + TFT", TFT.CYAN, sysfont, 2)
 
 contador = 0
 while True:

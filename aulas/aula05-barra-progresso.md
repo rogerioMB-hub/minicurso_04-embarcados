@@ -51,7 +51,7 @@ Se, a cada leitura, apagarmos a barra **inteira** e a redesenharmos, o display p
 
 ⚠️ Esta aula usa um **circuito diferente das anteriores**: adicionamos um potenciômetro. Use `assets/diagrams/diagram-tft-esp32-pot.json`.
 
-> 💡O link para a simulação é: (https://wokwi.com/projects/468654060624766977)
+> 💡 [Abrir simulação no Wokwi ↗](https://wokwi.com/projects/468654060624766977)
 
 ### Pinagem adicional
 
@@ -132,6 +132,8 @@ PIN_POT = 34
 
 spi = SPI(2, baudrate=20000000, polarity=0, phase=0,
           sck=Pin(PIN_SCK), mosi=Pin(PIN_MOSI))
+# Pico: spi = SPI(0, baudrate=20000000, polarity=0, phase=0,
+#              sck=Pin(PIN_SCK), mosi=Pin(PIN_MOSI))
 
 tft = TFT(spi, PIN_DC, PIN_RST, PIN_CS)
 tft.initr()

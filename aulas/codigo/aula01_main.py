@@ -17,6 +17,8 @@ PIN_RST  = 4    # Reset
 
 spi = SPI(2, baudrate=20000000, polarity=0, phase=0,
           sck=Pin(PIN_SCK), mosi=Pin(PIN_MOSI))
+# Pico: spi = SPI(0, baudrate=20000000, polarity=0, phase=0,
+#              sck=Pin(PIN_SCK), mosi=Pin(PIN_MOSI))
 
 tft = TFT(spi, PIN_DC, PIN_RST, PIN_CS)
 tft.initr()      # inicializa o controlador como ST7735 (tab preto/vermelho)

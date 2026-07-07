@@ -79,7 +79,7 @@ Ao final desta aula você será capaz de:
 
 ⚠️ **Importante:** o Wokwi **não tem um componente pronto** para o ST7735 (diferente do LCD e do OLED que vocês usaram no Mini-curso 03). Vamos usar um **chip criado pela comunidade** ([`martysweet/st7735-wokwi-chip`](https://github.com/martysweet/st7735-wokwi-chip), licença MIT).
 
-> 💡O link para a simulação é: (https://wokwi.com/projects/468652961129872385)
+> 💡 [Abrir simulação no Wokwi ↗](https://wokwi.com/projects/468652961129872385)
 
 ### Passo a passo
 
@@ -155,6 +155,8 @@ PIN_RST  = 4
 
 spi = SPI(2, baudrate=20000000, polarity=0, phase=0,
           sck=Pin(PIN_SCK), mosi=Pin(PIN_MOSI))
+# Pico: spi = SPI(0, baudrate=20000000, polarity=0, phase=0,
+#              sck=Pin(PIN_SCK), mosi=Pin(PIN_MOSI))
 
 tft = TFT(spi, PIN_DC, PIN_RST, PIN_CS)
 tft.initr()      # inicializa o controlador como ST7735

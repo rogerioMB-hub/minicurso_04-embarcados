@@ -53,7 +53,7 @@ Pensar em "que formas simples compõem esse desenho?" é uma habilidade central 
 
 O circuito é **o mesmo das aulas anteriores** — nenhuma mudança na ligação física. Use `assets/diagrams/diagram-tft-esp32.json`.
 
-> 💡O link para a simulação é: (https://wokwi.com/projects/468653677153164289)
+> 💡 [Abrir simulação no Wokwi ↗](https://wokwi.com/projects/468653677153164289)
 
 ---
 
@@ -71,6 +71,8 @@ PIN_SCK, PIN_MOSI, PIN_CS, PIN_DC, PIN_RST = 18, 23, 5, 2, 4
 
 spi = SPI(2, baudrate=20000000, polarity=0, phase=0,
           sck=Pin(PIN_SCK), mosi=Pin(PIN_MOSI))
+# Pico: spi = SPI(0, baudrate=20000000, polarity=0, phase=0,
+#              sck=Pin(PIN_SCK), mosi=Pin(PIN_MOSI))
 
 tft = TFT(spi, PIN_DC, PIN_RST, PIN_CS)
 tft.initr()

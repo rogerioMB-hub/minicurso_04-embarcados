@@ -56,7 +56,7 @@ A biblioteca `ST7735.py` oferece funções prontas para as formas mais comuns:
 
 O circuito é **o mesmo das Aulas 1 e 2** — nenhuma mudança na ligação física. Use `assets/diagrams/diagram-tft-esp32.json`.
 
-> 💡O link para a simulação é: (https://wokwi.com/projects/468653933807879169)
+> 💡 [Abrir simulação no Wokwi ↗](https://wokwi.com/projects/468653933807879169)
 
 ---
 
@@ -74,6 +74,8 @@ PIN_SCK, PIN_MOSI, PIN_CS, PIN_DC, PIN_RST = 18, 23, 5, 2, 4
 
 spi = SPI(2, baudrate=20000000, polarity=0, phase=0,
           sck=Pin(PIN_SCK), mosi=Pin(PIN_MOSI))
+# Pico: spi = SPI(0, baudrate=20000000, polarity=0, phase=0,
+#              sck=Pin(PIN_SCK), mosi=Pin(PIN_MOSI))
 
 tft = TFT(spi, PIN_DC, PIN_RST, PIN_CS)
 tft.initr()
