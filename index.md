@@ -21,7 +21,6 @@ Todas as aulas podem ser feitas **simulando no Wokwi**, direto do navegador, sem
 | 5 | [Barra de progresso / medidor](https://rogeriomb-hub.github.io/minicurso_04-embarcados/aulas/aula05-barra-progresso) | Mapeamento de valores |
 | 6 | [Gráfico de linha em tempo real](https://rogeriomb-hub.github.io/minicurso_04-embarcados/aulas/aula06-grafico-tempo-real) | Buffer e plotagem |
 
-> ⚠️ Lembre-se de substituir `SEU-USUARIO` pelo nome de usuário/organização do GitHub ao publicar (veja [COMO-PUBLICAR.md](https://rogeriomb-hub.github.io/minicurso_04-embarcados/COMO-PUBLICAR)).
 
 ## Pré-requisitos
 
